@@ -7,7 +7,7 @@ let total_col=0
 let output=[[]]
 const seatInfo ={}
 
-function calculateFirst (item)
+function calculateFirst (item)    //Function to calculate the which row belong belong to which group and what are there types
 {
     if(item[0]>1)
     {
@@ -110,7 +110,7 @@ else
 
 }
 
-function determineSeatType(row,col)
+function determineSeatType(row,col)    // Function to determint individual seat type and assign the pessanger number to that seat
 {
      
     let group = seatInfo[col].belongsTo
@@ -154,7 +154,7 @@ for(let i=0;i<total_row;i++)
 for (let i = 0; i < total_row; i++) {
     let rowString = "";
     for (let j = 0; j < total_col; j++) {
-        rowString += output[i][j] + "\t"; // Use tab ("\t") for spacing
+        rowString += output[i][j] + "\t";
     }
     console.log(rowString);
 }
